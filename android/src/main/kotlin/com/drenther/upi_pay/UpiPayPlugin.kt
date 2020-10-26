@@ -55,6 +55,7 @@ class UpiPayPlugin internal constructor(registrar: Registrar, channel: MethodCha
             uriBuilder.appendQueryParameter("tr", tr)
             uriBuilder.appendQueryParameter("am", am)
             uriBuilder.appendQueryParameter("cu", cu)
+            uriBuilder.appendQueryParameter("mode", "04")
             if (url != null) {
                 uriBuilder.appendQueryParameter("url", url)
             }
@@ -89,7 +90,7 @@ class UpiPayPlugin internal constructor(registrar: Registrar, channel: MethodCha
         uriBuilder.appendQueryParameter("tr", "123")
         uriBuilder.appendQueryParameter("am", "10")
         uriBuilder.appendQueryParameter("cu", "INR")
-        uriBuilder.appendQueryParameter("mode", "intent")
+        uriBuilder.appendQueryParameter("mode", "04")
 
         val uri = uriBuilder.build()
         val intent = Intent(Intent.ACTION_VIEW, uri)

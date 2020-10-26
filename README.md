@@ -57,7 +57,8 @@ UpiTransactionResponse txnResponse = await UpiPay.initiateTransaction(
   /// [url], [merchantCode] and [transactionNode]
 
   /// url can be used share some additional data related to the transaction like invoice copy, etc.
-  url: 'www.johnshop.com/order/ORD1215236',
+  /// must start with http or https protocol
+  url: 'https://www.johnshop.com/order/ORD1215236',
 
   /// this is code that identifies the type of the merchant
   /// if you have a merchant UPI VPA as the receiver address
